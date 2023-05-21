@@ -1,323 +1,510 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <title>YouTube Embeded Video</title>
-    <link rel="shortcut icon" href="https://igorashs.github.io/embedding-images-and-video/images/favicon.png" type="image/icon type">
-</head>
-<body>
-    <!--Nav Bar-->
-    <section id="nav-bar">
-        <div id="container-dropdown-youtubeIcon">
-            <i class="fas fa-bars" style="font-size: 1.2rem;"></i>
-            <div id="ytIcon" class="forgotToPutALink" style="font-size: 0.8rem;">
-                <i class="fab fa-youtube fa-2x" style="color: red;"></i>
-                <P>YouTube</P>
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>odin YouTube Video Player Page</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/android-chrome-512x512.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="styles/general.css" />
+    <link rel="stylesheet" type="text/css" href="styles/header.css" />
+    <link rel="stylesheet" type="text/css" href="styles/video-container.css" />
+    <link rel="stylesheet" type="text/css" href="styles/video-preview.css" />
+    <link rel="stylesheet" type="text/css" href="styles/comment.css" />
+    <link rel="stylesheet" type="text/css" href="styles/footer.css" />
+
+    <script
+      defer
+      src="https://kit.fontawesome.com/4c536a6bd5.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/active-button.js"></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="left-section">
+        <img class="hamburger-menu" src="icons/hamburger-menu.svg" alt="" />
+        <img class="youtube-logo" src="icons/youtube-logo.svg" alt="" />
+      </div>
+      <div class="middle-section">
+        <input
+          class="search-bar"
+          type="text"
+          placeholder="Search"
+          name=""
+          id=""
+        />
+        <button class="search-button">
+          <img class="search-icon" src="icons/search.svg" alt="" />
+          <div class="tooltip">Search</div>
+        </button>
+        <!--Put position absolute inside
+        position relative-->
+        <button class="voice-search-button">
+          <img
+            class="voice-search-icon"
+            src="icons/voice-search-icon.svg"
+            alt=""
+          />
+          <div class="tooltip">Search with your voice</div>
+        </button>
+      </div>
+      <div class="right-section">
+        <div class="upload-icon-container">
+          <img class="upload-icon" src="icons/upload.svg" alt="upload-icon" />
+          <div class="tooltip">Create</div>
         </div>
-        <div id="searchBar">
-            <div id="searchBoxContainer">
-                <input type="text" placeholder="Buscar">
-            </div>
-            <div id="searchBtnContainer" class="forgotToPutALink">
-                <i class="fas fa-search" style="font-size: 0.9rem;"></i>
-            </div>
+        <div class="youtube-apps-icon-container">
+          <img
+            class="youtube-apps-icon"
+            src="icons/youtube-apps.svg"
+            alt="youtube-apps-icon"
+          />
+          <div class="tooltip">Youtube apps</div>
         </div>
-        <div id="nav-googleAcc">
-            <i class="fas fa-th googleIcons"></i>
-            <i class="fas fa-bell googleIcons"></i>
-            <img id="ytProfileImage" class="googleIcons" src="https://lh3.googleusercontent.com/ogw/ADGmqu8X49eAUE4udoYGkt1HC0oHWiw0kHsfhEFnedqR=s32-c-mo" alt="Imagen de usuario">
+        <div class="notifications-icon-container">
+          <img
+            class="notifications-icon"
+            src="icons/notifications.svg"
+            alt="notifications-icon"
+          />
+          <div class="notifications-count">3</div>
+          <div class="tooltip">Notifications</div>
         </div>
+        <img
+          class="current-user-picture"
+          src="channel-profile-pics/my-channel.jpeg"
+          alt="my-channel-pic"
+        />
+      </div>
+    </header>
+    <section class="video-section">
+      <section class="youtube-video-iframe-section">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/rRaGGJWWs0M"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+        <div class="video-tags">
+          <span>
+            <a href="https://www.youtube.com/hashtag/learntocode"
+              >#learntocode</a
+            ></span
+          >
+          <span
+            ><a href="https://www.youtube.com/hashtag/softwaredeveloper"
+              >#softwaredeveloper</a
+            ></span
+          >
+          <span
+            ><a href="https://www.youtube.com/hashtag/softwareengineer"
+              >#softwareengineer</a
+            ></span
+          >
+        </div>
+        <div class="video-desc">
+          <p class="video-title">
+            Software Developer vs Software Engineer - The Difference
+          </p>
+          <p class="description">
+            <span>8,180 views Jan 27, 2021</span>
+            Is the difference between software developers and software
+            engineers? Do software developers and software engineers do
+            different work?
+          </p>
+          <p class="contact-link">
+            Contact:
+            <a
+              href="https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbTM1MU5pM2ZhSmVuWk1XYzFSQ2VDYmJPOU5vd3xBQ3Jtc0trMzFUTkR2VWhCMndLVVRwdHpYU0I4a2V1Z0k1aGtNTnJwbkNMZjFEa09DTU5lTjB1ZnRFcnlISG55S3BtU1BHLUNLMHQyZmh2WC0wSGp6bGNtaDlmLVN1dXlBQ1BxT0JBMVl1T2p0aTg0TXkyaEtYUQ&q=https%3A%2F%2Fsupersimple.dev%2Ffeedback&v=rRaGGJWWs0M"
+              >https://supersimple.dev/feedback</a
+            >
+          </p>
+          <p class="contact-link">
+            Instagram:
+            <a
+              href="https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqay1wd0tNQ3B0enVWU3RBTVJjT2xvWU5ndm9NUXxBQ3Jtc0tsQm5DdDFYaFlhZHZJYnhaTXRnRUZyVzNXM2Z2UzI0WXUxWjRQdUhWMDlvTWVtRFFzMmEtcjJEQ1ZRak1WSGUwQ0c3S2V3N2liczJLdzRIa3M4Y2IwZXRuRDhhSldLeks0SG9mR1JDeGhSZ2s1aUZYaw&q=https%3A%2F%2Fwww.instagram.com%2Fsupersimple.dev&v=rRaGGJWWs0M"
+              >https://www.instagram.com/supersimple...</a
+            >
+          </p>
+        </div>
+        <div class="video-tags">
+          <span>
+            <a href="https://www.youtube.com/hashtag/learntocode"
+              >#learntocode</a
+            ></span
+          >
+          <span
+            ><a href="https://www.youtube.com/hashtag/softwaredeveloper"
+              >#softwaredeveloper</a
+            ></span
+          >
+          <span
+            ><a href="https://www.youtube.com/hashtag/softwareengineer"
+              >#softwareengineer</a
+            ></span
+          >
+        </div>
+        <div class="subscribe-comment-container">
+          <div class="subscribe-section">
+            <div>
+              <img
+                class="channel-picture channel-info"
+                src="channel-profile-pics/supersimpledev-channel.jpg"
+                alt=""
+              />
+              <div class="channel-info">
+                <p class="channel-author">SuperSimpleDev</p>
+                <p class="channel-subscribers">39.5K subscribers</p>
+              </div>
+            </div>
+            <button class="subscribe-button">SUBSCRIBE</button>
+          </div>
+          <div class="comment-header">
+            <div id="comments-container">
+              <div class="comment-info">
+                <p class="comment-title">Comments</p>
+                <p class="comment-count">25</p>
+              </div>
+              <div class="display-comment">
+                <img
+                  class="channel-profile"
+                  src="channel-profile-pics/channel1_profile"
+                  alt="channel1-profile"
+                />
+                <p class="first-comment">
+                  Thanks man this was real appreciated
+                </p>
+              </div>
+            </div>
+            <img
+              class="comment-icon"
+              src="icons/greater-than-icon.jpg"
+              alt=">icon"
+            />
+          </div>
+        </div>
+        <div class="comment-section">
+          <div class="comment-sort">
+            <span>25 Comments</span>
+            <div class="sort-by-container">
+              <img class="sort-icon" src="icons/filter-left.svg" alt="" />
+              <span>sort by</span>
+              <div class="tooltip">Sort comments</div>
+            </div>
+          </div>
+          <div class="current-user-comment">
+            <img
+              class="comment-avatar"
+              src="channel-profile-pics/my-channel.jpeg"
+              alt=""
+            />
+            <input type="text" placeholder="Add a comment..." name="" id="" />
+          </div>
+        </div>
+        <div class="comments-grid">
+          <div class="comment-view-grid">
+            <div class="avatar-column">
+              <img
+                class="comment-avatar"
+                src="channel-profile-pics/channels2_profile.jpg"
+                alt=""
+              />
+            </div>
+            <div class="comment-desc">
+              <p class="comment-author">
+                luthfi_invt <span> 4 months ago </span>
+              </p>
+              <p class="comment-content">
+                software engineers use engineering concepts in designing
+                software so that it fits the needs of users. The software
+                engineer's responsibilities are broad, encompassing the seven
+                phases of the software development life cycle (SDLC)...
+              </p>
+              <button class="preview-menu-button-c">
+                <img
+                  class="preview-menu-icon"
+                  src="icons/three-dot-icon.png"
+                  alt=""
+                />
+              </button>
+              <p class="read-more">Read More</p>
+              <div class="reply-section">
+                <img class="like-icon" src="icons/like.svg" alt="like-icon" />
+                <span>8</span>
+                <img
+                  class="dislike-icon"
+                  src="icons/dislike.png"
+                  alt="dislike-icon"
+                />
+                <span class="reply-btn">REPLY</span>
+              </div>
+            </div>
+          </div>
+          <div class="comment-view-grid">
+            <div class="avatar-column">
+              <img
+                class="comment-avatar"
+                src="channel-profile-pics/channels3_profile.jpg"
+                alt=""
+              />
+            </div>
+            <div class="comment-desc">
+              <p class="comment-author">
+                Shadowkitty360 <span>1 year ago</span>
+              </p>
+              <p class="comment-content">
+                Hopefully applying for my first front end dev job in the next
+                few months. Thanks for the info and the confidence boost!
+              </p>
+              <button class="preview-menu-button-c">
+                <img
+                  class="preview-menu-icon"
+                  src="icons/three-dot-icon.png"
+                  alt=""
+                />
+              </button>
+              <p class="read-more">Read More</p>
+              <div class="reply-section">
+                <img class="like-icon" src="icons/like.svg" alt="like-icon" />
+                <span>6</span>
+                <img
+                  class="dislike-icon"
+                  src="icons/dislike.png"
+                  alt="dislike-icon"
+                />
+                <span class="reply-btn">REPLY</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="video-previews-section">
+        <div id="related-topics">
+          <button class="topic-btn topic-active">All</button>
+          <button class="topic-btn">Related</button>
+          <button class="topic-btn">From SuperSimpleDev</button>
+          <button class="topic-btn">Software Engineer</button>
+        </div>
+        <div class="previews-container-grid">
+          <div class="video-preview-grid">
+            <div class="thumbnail-column">
+              <img class="thumbnail" src="thumbnails/thumbnail-1.webp" alt="" />
+              <div class="video-time">14:20</div>
+            </div>
+            <div class="video-info">
+              <p class="video-preview-title">
+                Talking Tech and AI with Google CEO Sundar Pichai!
+              </p>
+              <p class="video-author">Marques Brownlee</p>
+              <p class="video-stats">3.4M views &middot; 6 months ago</p>
+              <button class="preview-menu-button">
+                <img
+                  class="preview-menu-icon"
+                  src="icons/three-dot-icon.png"
+                  alt="preview-menu-icon"
+                />
+              </button>
+            </div>
+          </div>
+          <div class="video-preview-grid">
+            <div class="thumbnail-column">
+              <img class="thumbnail" src="thumbnails/thumbnail-2.webp" alt="" />
+              <div class="video-time">10:21</div>
+            </div>
+            <div class="video-info">
+              <p class="video-preview-title">
+                Backend web development - a complete overview (2021)
+              </p>
+              <p class="video-author">SuperSimpleDev</p>
+              <p class="video-stats">151K views &middot; 7 months ago</p>
+              <button class="preview-menu-button">
+                <img
+                  class="preview-menu-icon"
+                  src="icons/three-dot-icon.png"
+                  alt="preview-menu-icon"
+                />
+              </button>
+            </div>
+          </div>
+          <div class="video-preview-grid">
+            <div class="thumbnail-column">
+              <img class="thumbnail" src="thumbnails/thumbnail-3.webp" alt="" />
+              <div class="video-time">10:21</div>
+            </div>
+            <div class="video-info">
+              <p class="video-preview-title">
+                The Harsh Reality of Being a Software Engineer
+              </p>
+              <div class="verified-author">
+                <p class="video-author">Gyasi Linje</p>
+                <img src="icons/verified-icon.jpg" alt="verified-icon" />
+              </div>
+
+              <p class="video-stats">1.2M views &middot; 7 months ago</p>
+              <button class="preview-menu-button">
+                <img
+                  class="preview-menu-icon"
+                  src="icons/three-dot-icon.png"
+                  alt="preview-menu-icon"
+                />
+              </button>
+            </div>
+          </div>
+          <div class="video-preview-grid">
+            <div class="thumbnail-column">
+              <img class="thumbnail" src="thumbnails/thumbnail-4.webp" alt="" />
+              <div class="video-time">22:09</div>
+            </div>
+            <div class="video-info">
+              <p class="video-preview-title">
+                The Simplest Math Problem No One Can Solve - Collatz Conjecture
+              </p>
+              <p class="video-author">Veritasium</p>
+              <p class="video-stats">18M views &middot; 4 months ago</p>
+              <button class="preview-menu-button">
+                <img
+                  class="preview-menu-icon"
+                  src="icons/three-dot-icon.png"
+                  alt="preview-menu-icon"
+                />
+              </button>
+            </div>
+          </div>
+          <div class="video-preview-grid">
+            <div class="thumbnail-column">
+              <img class="thumbnail" src="thumbnails/thumbnail-5.webp" alt="" />
+              <div class="video-time">11:17</div>
+            </div>
+            <div class="video-info">
+              <p class="video-preview-title">
+                Kadane's Algorithm to Maximum Sum Subarray Problem
+              </p>
+              <p class="video-author">CS Dojo</p>
+              <p class="video-stats">519K views &middot; 5 years ago</p>
+              <button class="preview-menu-button">
+                <img
+                  class="preview-menu-icon"
+                  src="icons/three-dot-icon.png"
+                  alt="preview-menu-icon"
+                />
+              </button>
+            </div>
+          </div>
+          <div class="video-preview-grid">
+            <div class="thumbnail-column">
+              <img class="thumbnail" src="thumbnails/thumbnail-6.webp" alt="" />
+              <div class="video-time">6:56</div>
+            </div>
+            <div class="video-info">
+              <p class="video-preview-title">
+                Stop wasting time when you're learning to code!
+              </p>
+              <div class="verified-author">
+                <p class="video-author">Coder Coder</p>
+                <img src="icons/verified-icon.jpg" alt="verified-icon" />
+              </div>
+              <p class="video-stats">869K views &middot; 7 months ago</p>
+              <button class="preview-menu-button">
+                <img
+                  class="preview-menu-icon"
+                  src="icons/three-dot-icon.png"
+                  alt="preview-menu-icon"
+                />
+              </button>
+            </div>
+          </div>
+          <div class="video-preview-grid">
+            <div class="thumbnail-column">
+              <img class="thumbnail" src="thumbnails/thumbnail-7.webp" alt="" />
+              <div class="video-time">4:09</div>
+            </div>
+            <div class="video-info">
+              <p class="video-preview-title">
+                software engineer salaries be like
+              </p>
+              <p class="video-author">PIRATE KING</p>
+              <p class="video-stats">904K views &middot; 2 months ago</p>
+              <button class="preview-menu-button">
+                <img
+                  class="preview-menu-icon"
+                  src="icons/three-dot-icon.png"
+                  alt="preview-menu-icon"
+                />
+              </button>
+            </div>
+          </div>
+          <div class="video-preview-grid">
+            <div class="thumbnail-column">
+              <img class="thumbnail" src="thumbnails/thumbnail-8.webp" alt="" />
+              <div class="video-time">12:45</div>
+            </div>
+            <div class="video-info">
+              <p class="video-preview-title">
+                What does "Senior" Software Engineer mean? (From a Senior
+                Software Engineer)
+              </p>
+              <div class="verified-author">
+                <p class="video-author">mayuko</p>
+                <img src="icons/verified-icon.jpg" alt="verified-icon" />
+              </div>
+              <p class="video-stats">163K views &middot; 6 months ago</p>
+              <button class="preview-menu-button">
+                <img
+                  class="preview-menu-icon"
+                  src="icons/three-dot-icon.png"
+                  alt="preview-menu-icon"
+                />
+              </button>
+            </div>
+          </div>
+          <div class="video-preview-grid">
+            <div class="thumbnail-column">
+              <img class="thumbnail" src="thumbnails/thumbnail-9.webp" alt="" />
+              <div class="video-time">9:58</div>
+            </div>
+            <div class="video-info">
+              <p class="video-preview-title">
+                I’m bad at coding…. (my software engineering journey)
+              </p>
+              <p class="video-author">Pooja Dutt</p>
+              <p class="video-stats">201K views &middot; 2 weeks ago</p>
+              <button class="preview-menu-button">
+                <img
+                  class="preview-menu-icon"
+                  src="icons/three-dot-icon.png"
+                  alt="preview-menu-icon"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
     </section>
-    <!--Main container-->
-    <section id="main-container">
-        <section id="video-row">
-            <!--Video section-->
-            <section id="videoContainer">
-                <iframe width="640" height="360" src="https://www.youtube.com/embed/MQAOpZfdrek" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <h2>Asi se siente - AM (Pre-View)</h2>
-                <div id="videoInfo">
-                    <div class="likeBox" id="visualizations">
-                        <p>4.005.103.691 visualizaciones</p>
-                    </div>
-                    <div class="likeBox">
-                        <i class="fas fa-thumbs-up like-size"></i>
-                        <p>13.766</p>
-                    </div>
-                    <div class="likeBox">
-                        <i class="fas fa-thumbs-down like-size"></i>
-                        <p>99</p>
-                    </div>
-                    <div class="likeBox">
-                        <i class="fas fa-share like-size"></i>
-                        <p>COMPARTIR</p>
-                    </div>
-                    <div class="likeBox">
-                        <i class="fas fa-list like-size"></i>
-                        <p>GUARDAR</p>
-                    </div>
-                    <div class="likeBox">
-                        <i class="fas fa-ellipsis-h like-size"></i>
-                    </div>
-                </div>
-                <div id="containerDescrip">
-                    <div id="barra-superior">
-                        <div id="canal">
-                            <div id="userProfileImageContainer">
-                                <img id="userProfileImage" class="forgotToPutALink" src="https://yt3.ggpht.com/ytc/AAUvwnhGY9njkrSDMiCh8In49i5vkBKOzl9yRlwpVJDW=s48-c-k-c0x00ffffff-no-rj" alt="Imagen de usuario">
-                            </div>
-                            <div id="containerInfoCanal">
-                                <p id="userName" class="forgotToPutALink">AM Force</p>
-                                <p id="userSuscriptors">879M suscriptores</p>
-                            </div>
-                        </div>
-                        <div id="suscribeBtn">
-                            <p id="insideBtn" class="forgotToPutALink">SUSCRIBIRME</p>
-                        </div>
-                    </div>
-                    <div id="containerParrafoDescr">
-                        <p></p>
-                        <p></p>
-                    </div>
-                </div>
-            </section>
-
-            <!--Comments Section-->
-            <section id="comments">
-                <div id="firstRowComments">
-                    <p id="numberOfComments">58321 comentarios</p>
-                    <div id="orderComents" class="forgotToPutALink">
-                        <i class="fas fa-sort-amount-down-alt fa-2x" style="font-size: 1.2rem;"></i>
-                        <p id="textOrderComments">ORDENAR POR</p>
-                    </div>
-                </div>
-                <div id="addRowComments" class="commentsBox">
-                    <img id="ytProfileImage" class="googleIcons forgotToPutALink" src="https://lh3.googleusercontent.com/ogw/ADGmqu8X49eAUE4udoYGkt1HC0oHWiw0kHsfhEFnedqR=s32-c-mo" alt="Imagen de usuario">
-                    <div id="containerInputComment">
-                        <input id="comentarioInput" type="text" placeholder="Agrega un comentario público...">
-                    </div>
-                </div>
-                <div id="comment1" class="commentsBox">
-                    <div class="imageCommentContainer">
-                        <img id="ytProfileImage" class="googleIcons" src="https://yt3.ggpht.com/ytc/AAUvwnizQ2zIQRRqrBYeBgtFQyuiPW0rPHyipiA-Hx9N=s48-c-k-c0x00ffffff-no-rj" alt="Imagen de usuario">
-                    </div>
-                    <div class="containerInfoComments">
-                        <div class="firstRowInfoComments">
-                            <p class="userComment">Pedro Infantes</p>
-                            <p class="timeComment">Hace 1 año</p>
-                        </div>
-                        <p class="writtenComment">Me parece un video espectacular, buen ritmo, buen flow. La buena parcero...</p>
-                        <div class="interaccionRow">
-                            <div class="likeBox">
-                                <i class="fas fa-thumbs-up"></i>
-                                <p>1k</p>
-                            </div>
-                            <div class="likeBox responder">
-                                <i class="fas fa-thumbs-down"></i>
-                                <p> RESPONDER</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="comment2" class="commentsBox">
-                    <div class="imageCommentContainer">
-                        <img id="ytProfileImage" class="googleIcons" src="https://yt3.ggpht.com/ytc/AAUvwnh5ziv0BBAs6tcI5B_BvXDA5cXgSiv-O5H-H8pR=s48-c-k-c0x00ffffff-no-rj" alt="Imagen de usuario">
-                    </div>
-                    <div class="containerInfoComments">
-                        <div class="firstRowInfoComments">
-                            <p class="userComment">Pepito Perez</p>
-                            <p class="timeComment">Hace 1 año</p>
-                        </div>
-                        <p class="writtenComment">Aweasome... Im your fan now =)</p>
-                        <div class="interaccionRow">
-                            <div class="likeBox">
-                                <i class="fas fa-thumbs-up"></i>
-                                <p>1k</p>
-                            </div>
-                            <div class="likeBox responder">
-                                <i class="fas fa-thumbs-down"></i>
-                                <p> RESPONDER</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="comment3" class="commentsBox">
-                    <div class="imageCommentContainer">
-                        <img id="ytProfileImage" class="googleIcons" src="https://yt3.ggpht.com/ytc/AAUvwnjWOiYfNf8X7wro1RH0bd-N6Rje6ANzUwU1a4IIB0M=s48-c-k-c0x00ffffff-no-rj" alt="Imagen de usuario">
-                    </div>
-                    <div class="containerInfoComments">
-                        <div class="firstRowInfoComments">
-                            <p class="userComment">Rap Gansta</p>
-                            <p class="timeComment">Hace 1 año</p>
-                        </div>
-                        <p class="writtenComment">OMG!!!! Sound so good, and the beat.... mmmmm delicious</p>
-                        <div class="interaccionRow">
-                            <div class="likeBox">
-                                <i class="fas fa-thumbs-up"></i>
-                                <p>1k</p>
-                            </div>
-                            <div class="likeBox responder">
-                                <i class="fas fa-thumbs-down"></i>
-                                <p> RESPONDER</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </section>
-<!--
-    Comentarios
-        comentario 1
-            foto
-            informacion
-                fila superior
-                    nombre
-                    hace cuanto
-                comentario(parrafo)
-                fila Interaccion
-                    boton me gusta
-                    boton no me gusta
-                    boton responder
-        comentario 2
-            foto
-            informacion
-                fila superior
-                    nombre
-                    hace cuanto
-                comentario(parrafo)
-                fila Interaccion
-                    boton me gusta
-                    boton no me gusta
-                    boton responder
-        comentario 3
-                    foto
-                    informacion
-                        fila superior
-                            nombre
-                            hace cuanto
-                        comentario(parrafo)
-                        fila Interaccion
-                            boton me gusta
-                            boton no me gusta
-                            boton responder -->
-        <!-- Thumbnail Section -->
-        <section id="thumbnail-section">
-            <div id="thumbnails-container">
-                <ul>
-                    <li class="containerMinature">
-                        <div class="miniVideoContainer">
-                            <a href="https://www.youtube.com/watch?v=MQAOpZfdrek" target="_blank">
-                                <img id="img" class="style-scope yt-img-shadow" alt="Quien tiene magia - AM force" width="169" src="https://i.ytimg.com/vi/MQAOpZfdrek/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&amp;rs=AOn4CLBJxwqcOAwINkFKI1hKmp199wR5Bg">
-                            </a>
-                            <div class="ContainerEmbededVideoDescriptio">
-                                <p class="embededTittle">Asi se siente - AM (Pre-View)</p>
-                                <p class="embededDescription">
-                                    AM Force<br>
-                                    4000M visualizaciones <br>
-                                    Hace 2 años
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="containerMinature">
-                        <div class="miniVideoContainer">
-                            <a href="https://www.youtube.com/watch?v=dQ0qTjbdY2A" target="_blank">
-                                <img id="img" class="style-scope yt-img-shadow" alt="Abaqus" width="168" src="https://i.ytimg.com/vi/dQ0qTjbdY2A/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&amp;rs=AOn4CLAQyhcrdgJlT_ecSlFnl5hP1LjdKg">
-                            </a>
-                            <div class="ContainerEmbededVideoDescriptio">
-                                <p class="embededTittle">Control 4 de Abaqus</p>
-                                <p class="embededDescription">
-                                    petu mazo <br>
-                                    2M visualizaciones <br>
-                                    Hace 7 años
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="containerMinature">
-                        <div class="miniVideoContainer">
-                            <a href="https://www.youtube.com/watch?v=BaShm22l8x8" target="_blank">
-                                <img id="img" class="style-scope yt-img-shadow" alt="Microverse1" width="168" src="https://i.ytimg.com/vi/BaShm22l8x8/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&amp;rs=AOn4CLA_SyBJ6nsoWhBEiWcNCI4EEK7KyQ">
-                            </a>
-                            <div class="ContainerEmbededVideoDescriptio">
-                                <p class="embededTittle">How to make an Impact as a Junior Developer</p>
-                                <p class="embededDescription">
-                                    Microverse <br>
-                                    329 visualizaciones <br>
-                                    Hace 1 año
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="containerMinature">
-                        <div class="miniVideoContainer">
-                            <a href="https://www.youtube.com/watch?v=SfHhVGaQx_M" target="_blank">
-                                <img id="img" class="style-scope yt-img-shadow" alt="Hola Mundo1" width="168" src="https://i.ytimg.com/vi/SfHhVGaQx_M/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&amp;rs=AOn4CLC8uXGyUhex8z4sjbjkCnNEY3-t4g">
-                            </a>
-                            <div class="ContainerEmbededVideoDescriptio">
-                                <p class="embededTittle">100k USD, como ganar eso o más al año?</p>
-                                <p class="embededDescription">
-                                    Hola Mundo <br>
-                                    5k visualizaciones <br>
-                                    Hace 1 año
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="containerMinature">
-                        <div class="miniVideoContainer">
-                            <a href="https://www.youtube.com/watch?v=xMF2A8CsNiY&t" target="_blank">
-                                <img id="img" class="style-scope yt-img-shadow" alt="Hola Mundo2" width="168" src="https://i.ytimg.com/vi/xMF2A8CsNiY/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&amp;rs=AOn4CLCCHhDeHrZl0Vu3S2JxPNsj0lmJJQ">
-                            </a>
-                            <div class="ContainerEmbededVideoDescriptio">
-                                <p class="embededTittle">Mis libros de programación favoritos</p>
-                                <p class="embededDescription">
-                                    Hola Mundo <br>
-                                    62k visualizaciones <br>
-                                    Hace 1 mes
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="containerMinature">
-                        <div class="miniVideoContainer">
-                            <a href="https://www.youtube.com/watch?v=f9ip1iSAptQ" target="_blank">
-                                <img id="img" class="style-scope yt-img-shadow" alt="Micorverse2" width="168" src="https://i.ytimg.com/vi/f9ip1iSAptQ/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&amp;rs=AOn4CLDIeyKA9EMuELNkYGAunEN_gbkQkA">
-                            </a>
-                            <div class="ContainerEmbededVideoDescriptio">
-                                <p class="embededTittle">What is Microverse?</p>
-                                <p class="embededDescription">
-                                    Microverse <br>
-                                    14.3k visualizaciones <br>
-                                    Hace 2 años
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="containerMinature">
-                        <div class="miniVideoContainer">
-                            <a href="https://www.youtube.com/watch?v=uXWtpoT9diE" target="_blank">
-                                <img id="img" class="style-scope yt-img-shadow" alt="TO" width="168" src="https://i.ytimg.com/vi/uXWtpoT9diE/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&amp;rs=AOn4CLAojt4u4L3QKFsXNm7RLii5U2cX1A">
-                            </a>
-                            <div class="ContainerEmbededVideoDescriptio">
-                                <p class="embededTittle">Si Ming PR cave Talisman Online</p>
-                                <p class="embededDescription">
-                                    petu mazo <br>
-                                    300k visualizaciones <br>
-                                    Hace 11 años
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-
-                </ul>
-            </div>
-        </section>
-    </section>
-
-</body>
+    <footer>
+      <p>
+        Copyright &copy;
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        Mohamed Aden Ighe
+      </p>
+      <a href="https://github.com/katarighe" target="_blank">
+        <img src="icons/github-128.svg" class="fab fa-github" />
+      </a>
+    </footer>
+  </body>
 </html>
